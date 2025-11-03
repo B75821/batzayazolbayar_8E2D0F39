@@ -16,4 +16,5 @@ Mongolia for traveling. Bemutatja Mongólia népszerű úti céljait, kultúráj
 
 # pelda website 
 
-[pelda](https://www.eternal-landscapes.co.uk/)
+
+[pelda](https://www.discovermongolia.mn/)
