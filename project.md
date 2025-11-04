@@ -14,7 +14,5 @@ Mongolia for traveling. Bemutatja Mongólia népszerű úti céljait, kultúráj
 - **Úti célok oldal**: Ajánlott helyszínek bemutatása.
 - **Kultúra oldal**: Információk a mongol hagyományokról és életmódról.
 
-# pelda website 
 
 
-[pelda](https://www.discovermongolia.mn/)
