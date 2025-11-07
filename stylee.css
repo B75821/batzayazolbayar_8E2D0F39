@@ -1,0 +1,162 @@
+:root {
+  --accent: #d92c2c;
+  --gap: 1rem;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  background: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+nav a.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.section {
+  display: none;
+  padding-bottom: 3rem;
+}
+
+.active-section {
+  display: block;
+}
+
+.hero {
+  text-align: center;
+  padding: 4.5rem 1.5rem;
+  background: linear-gradient(#d3e9f2, #fff);
+}
+
+.hero h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+}
+
+.container {
+  padding: 2rem;
+}
+
+.cards,
+.destinations-grid {
+  display: flex;
+  gap: var(--gap);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card,
+.dest-card {
+  width: 420px;
+  border: 1px solid #eee;
+  padding: 1.25rem;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+h3 {
+  color: var(--accent);
+  margin-top: 0;
+}
+
+ul {
+  margin-top: 0.5rem;
+  padding-left: 1.2rem;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tab {
+  flex: 1;
+  min-width: 120px;
+  padding: 0.6rem;
+  text-align: center;
+  border: 1px solid #eee;
+  cursor: pointer;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.tab.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.culture-content {
+  display: none;
+  padding: 1.25rem;
+}
+
+.culture-content.active {
+  display: block;
+}
+
+.culture-boxes {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.culture-box {
+  flex: 1;
+  min-width: 260px;
+  border: 1px solid #eee;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #fff;
+}
+
+button.primary {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .card,
+  .dest-card {
+    width: 100%;
+  }
+  header {
+    padding: 0.8rem 1rem;
+  }
+}

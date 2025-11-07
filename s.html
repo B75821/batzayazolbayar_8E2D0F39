@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Mongólia </title>
+    <link rel="stylesheet" href="stylee.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Mongolia for travelling</div>
+    <nav>
+      <a data-target="home" class="active">Főoldal</a>
+      <a data-target="destinations">Úti Célok</a>
+      <a data-target="culture">Kultúra</a>
+    </nav>
+  </header>
+
+
+  <section id="home" class="section active-section">
+    <div class="hero">
+      <h1>Mongolia </h1>
+      <p>Life is beautiful</p>
+      <button class="primary" id="startBtn">Start</button>
+    </div>
+
+    <div class="container" style="text-align:center">
+      <h2>Miért Mongólia?</h2>
+      <p>Mongólia egy olyan hely, ahol az időtlen nomád kultúra találkozik a lélegzetelállító természeti szépséggel.</p>
+
+      <div class="cards" aria-hidden="false" role="list">
+        <div class="card" role="listitem">
+          <h3>Végtelen táj</h3>
+          <p>Hatalmas sztyeppék, lenyűgöző hegyek és a Góbi-sivatag csodái várnak rád.</p>
+        </div>
+
+        <div class="card" role="listitem">
+          <h3>Nomád kultúra</h3>
+          <p>Élj át autentikus élményeket jurta-táborokban és ismerd meg az ősi hagyományokat.</p>
+        </div>
+
+        <div class="card" role="listitem">
+          <h3>Kalandok</h3>
+          <p>Lovaglás, túrázás, tevés — felejthetetlen élmények a természet közepén.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="destinations" class="section">
+    <div class="hero">
+      <h1>Úti Célok</h1>
+      <p>Fedezd fel Mongólia legszebb helyeit</p>
+    </div>
+
+    <div class="container">
+      <div class="destinations-grid">
+        <article class="dest-card" aria-labelledby="gobi-title">
+          <h3 id="gobi-title">Góbi-sivatag</h3>
+          <p>A világ egyik legkülönlegesebb sivataga, ahol homokdűnék, sziklás hegyek és ritkán lakott területek találhatók.</p>
+          <b>Látnivalók:</b>
+          <ul>
+            <li>Khongoryn Els homokdűnék</li>
+            <li>Flaming Cliffs</li>
+            <li>Yolyn Am szurdok</li>
+          </ul>
+        </article>
+
+        <article class="dest-card" aria-labelledby="ub-title">
+          <h3 id="ub-title">Ulánbátor</h3>
+          <p>Mongólia fővárosa, ahol a modern élet és a hagyományos kultúra találkozik.</p>
+          <b>Látnivalók:</b>
+          <ul>
+            <li>Gandantegchinlen kolostor</li>
+            <li>Szübaatar tér</li>
+            <li>Nemzeti Történeti Múzeum</li>
+          </ul>
+        </article>
+
+        <article class="dest-card" aria-labelledby="khovs-title">
+          <h3 id="khovs-title">Hövsögöl-tó</h3>
+          <p>Mongólia 'kék gyöngyszeme', az egyik legszebb hegyi tó Ázsiában.</p>
+          <b>Látnivalók:</b>
+          <ul>
+            <li>Kristálytiszta víz</li>
+            <li>Rénszarvastenyésztő nomádok</li>
+            <li>Túrázási lehetőségek</li>
+          </ul>
+        </article>
+
+        <article class="dest-card" aria-labelledby="altai-title">
+          <h3 id="altai-title">Altáj-hegység</h3>
+          <p>Lenyűgöző hegyek nyugat-Mongóliában, ahol a kazak nomádok élnek.</p>
+          <b>Látnivalók:</b>
+          <ul>
+            <li>Sas-vadászat</li>
+            <li>Gleccserek</li>
+            <li>Petroglifák</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="culture" class="section">
+    <div class="hero">
+      <h1>Mongol Kultúra</h1>
+    </div>
+
+    <div class="container">
+      <div class="tabs" role="tablist" aria-label="Kultúra fülek">
+        <div class="tab active" role="tab" data-tab="life" aria-selected="true">Nomád Életmód</div>
+        <div class="tab" role="tab" data-tab="traditions" aria-selected="false">Hagyományok</div>
+        <div class="tab" role="tab" data-tab="food" aria-selected="false">Gasztronómia</div>
+      </div>
+
+      <div id="life" class="culture-content active" role="tabpanel">
+        <h3>A Nomád Élet</h3>
+        <p>A mongolok több mint fele ma is nomád életmódot folytat.</p>
+        <p><b>Jurta (Ger)</b><br>A hagyományos mongol jurta könnyedén szétszerelhető és szállítható.</p>
+        <p><b>Állattenyésztés</b><br>Az „öt kincs” – ló, teve, juh, kecske, szarvasmarha – központi szerepet játszik.</p>
+        <p><b>Évszakok szerinti vándorlás</b><br>A nomád családok évente 2–4 alkalommal költöznek.</p>
+      </div>
+
+      <div id="traditions" class="culture-content " role="tabpanel" >
+        <h3>Hagyományok és Ünnepek</h3>
+        <p>Évezredes szokások és ünnepek</p>
+        <p><b>Naadam Fesztivál</b><br>Mongólia nemzeti ünnepe júliusban. Három fő sportág középpontjában: birkózás, lovaglás és íjászat. Ez a legnagyobb kulturális esemény az országban.</p>
+        <p><b>Tsagaan Sar (Fehér Hónap)</b><br>A mongol újév ünnepe, ami a hold naptár szerint változik (általában január-február). Családi összejövetelek és hagyományos ételek jellemzik.</p>
+        <p><b>Torokgene</b><br>A hagyományos mongol torokének (hosszúdal) UNESCO világörökség részét képezik. Ezek a dalok a természetet és a nomád életet ünneplik.</p>
+      </div>
+
+      <div id="food" class="culture-content active" role="tabpanel">
+        <h3>Mongol Ételek</h3>
+        <p>Hús és tejtermékek alapú hagyományos ételek</p>
+        <p><b>Buuz</b><br>Gőzölt gombócok birka- vagy marhahússal töltve. Az egyik legnépszerűbb mongol étel, különösen Tsagaan Sar idején.</p>
+        <p><b>Airag</b><br>Erjesztett kancatej, a hagyományos mongol ital. Enyhén alkoholos és gazdag tápanyagokban. Nyáron a legjobb.</p>
+        <p><b>Khorkhog</b><br>Hagyományos mongol barbecue, forró kövekkel főzve egy zárt edényben. Különleges ünnepekkor készítik.</p>
+        <p><b>Khuushuur</b><br>Fritőzben sült tészta, általában darált birka- vagy marhahússal és hagymával töltve, kívül ropogós, belül szaftos.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navLinks = document.querySelectorAll('nav a[data-target]');
+      const sections = document.querySelectorAll('.section');
+
+      function showSection(targetId){
+        sections.forEach(s => s.classList.remove('active-section'));
+        const el = document.getElementById(targetId);
+        if(el) el.classList.add('active-section');
+
+        navLinks.forEach(l => {
+          l.classList.toggle('active', l.getAttribute('data-target') === targetId);
+        });
+      }
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          const target = link.getAttribute('data-target');
+          showSection(target);
+        });
+      });
+
+      const startBtn = document.getElementById('startBtn');
+      if(startBtn){
+        startBtn.addEventListener('click', () => showSection('destinations'));
+      }
+
+      const tabs = document.querySelectorAll('.tab[data-tab]');
+      const contents = document.querySelectorAll('.culture-content');
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          const t = tab.getAttribute('data-tab');
+          tabs.forEach(tb => { tb.classList.toggle('active', tb === tab); tb.setAttribute('aria-selected', tb === tab); });
+          contents.forEach(c => {
+            const visible = c.id === t;
+            c.classList.toggle('active', visible);
+            c.setAttribute('aria-hidden', !visible);
+          });
+        });
+      });
+
+      showSection('home');
+    });
+  </script>
+</body>
+</html>
