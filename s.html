@@ -187,6 +187,156 @@
 
       showSection('home');
     });
+
+    //
+
+// 1. ARRAY (tömb)
+const destinations = [
+    "Góbi-sivatag",
+    "Ulánbátor", 
+    "Hövsögöl-tó",
+    "Altáj-hegység",
+    "Karakorum",
+    "Terelj Nemzeti Park"
+];
+
+// 2. FUNCTION (függvény) 
+function simpleSearch() {
+    const searchText = document.getElementById('searchInput').value.toLowerCase();
+    const resultDiv = document.getElementById('searchResult');
+    
+    // 3. LOGICAL OPERATION 
+    if (searchText === "") {
+        resultDiv.innerHTML = "<p>Kérjük, írj be valamit!</p>";
+        return;
+    }
+    
+    let found = false;
+    let resultHTML = "";
+    
+    // 4. LOOP (ciklus) 
+    for (let i = 0; i < destinations.length; i++) {
+        // 5. CONDITIONAL (elágazás)
+        if (destinations[i].toLowerCase().includes(searchText)) {
+            found = true;
+            // 6. ARITHMETIC 
+            const position = i + 1;
+            resultHTML += `<p> ${position}. ${destinations[i]}</p>`;
+        }
+    }
+    
+    // 7. LOGICAL OPERATION -
+    if (!found) {
+        resultHTML = "<p> Nincs találat</p>";
+    }
+    
+    resultDiv.innerHTML = resultHTML;
+}
+
+// 8. FUNCTION 
+function showCount() {
+    // 9. ARITHMETIC 
+    const total = destinations.length;
+    const hasLake = countLakeDestinations();
+    
+    alert(`Összes úti cél: ${total}\n${hasLake} tó van a listában`);
+}
+
+// 10. FUNCTION 
+function countLakeDestinations() {
+    let count = 0;
+    
+    for (let i = 0; i < destinations.length; i++) {
+        // 11. CONDITIONAL 
+        if (destinations[i].includes("tó")) {
+            count = count + 1; // Simple arithmetic
+        }
+    }
+    
+    return count;
+}
+
+// 12. FUNCTION 
+function findLongestName() {
+    let longest = destinations[0];
+    
+    for (let i = 1; i < destinations.length; i++) {
+        // 13. CONDITIONAL 
+        if (destinations[i].length > longest.length) {
+            longest = destinations[i];
+        }
+    }
+    
+    alert(`Leghosszabb név: ${longest}\nHossza: ${longest.length} betű`);
+}
+
+function initSimpleSearch() {
+    
+    const simpleSearchHTML = `
+        <div class="simple-search">
+            <h3> Úti cél Kereső</h3>
+            <input type="text" id="searchInput" placeholder="Írd ide a cél neve...">
+            <button onclick="simpleSearch()">Keresés</button>
+            <button onclick="showCount()">Számlálás</button>
+            <button onclick="findLongestName()">Leghosszabb</button>
+            <div id="searchResult" class="search-result"></div>
+        </div>
+    `;
+    
+    const homeSection = document.getElementById('home');
+    const container = homeSection.querySelector('.container');
+    container.insertAdjacentHTML('beforebegin', simpleSearchHTML);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('nav a[data-target]');
+    const sections = document.querySelectorAll('.section');
+
+    function showSection(targetId){
+        sections.forEach(s => s.classList.remove('active-section'));
+        const el = document.getElementById(targetId);
+        if(el) el.classList.add('active-section');
+
+        navLinks.forEach(l => {
+            l.classList.toggle('active', l.getAttribute('data-target') === targetId);
+        });
+    }
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            const target = link.getAttribute('data-target');
+            showSection(target);
+        });
+    });
+
+    const startBtn = document.getElementById('startBtn');
+    if(startBtn){
+        startBtn.addEventListener('click', () => showSection('destinations'));
+    }
+
+    const tabs = document.querySelectorAll('.tab[data-tab]');
+    const contents = document.querySelectorAll('.culture-content');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const t = tab.getAttribute('data-tab');
+            tabs.forEach(tb => { 
+                tb.classList.toggle('active', tb === tab); 
+                tb.setAttribute('aria-selected', tb === tab); 
+            });
+            contents.forEach(c => {
+                const visible = c.id === t;
+                c.classList.toggle('active', visible);
+                c.setAttribute('aria-hidden', !visible);
+            });
+        });
+    });
+
+    showSection('home');
+    
+    initSimpleSearch();
+});
   </script>
 </body>
 </html>
+
